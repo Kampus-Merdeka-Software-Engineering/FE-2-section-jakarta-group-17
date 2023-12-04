@@ -8,21 +8,12 @@
     <!-- Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,600;1,700;1,900&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,600;1,700;1,900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 
     <script src="https://unpkg.com/feather-icons"></script>
     <!-- Link Swiper's CSS -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <!-- mystyle -->
     <link rel="stylesheet" href="css/style.css" />
   </head>
@@ -50,10 +41,7 @@
     <section class="hero" id="home">
       <main class="content">
         <h1>The Way to a <span>Healthier</span> You Starts Here.</h1>
-        <p>
-          Embark on a wellness journey with our delectable and nutritious menu.
-          Let's dedicate ourselves to a healthier lifestyle!
-        </p>
+        <p>Embark on a wellness journey with our delectable and nutritious menu. Let's dedicate ourselves to a healthier lifestyle!</p>
         <a href="#contact" class="cta">Order Now</a>
       </main>
     </section>
@@ -71,17 +59,10 @@
         </div>
         <div class="content">
           <h3>Kenapa harus memilih GOHealth?</h3>
+          <p>GOHealth menawarkan menu makanan sehat yang dirancang khusus untuk memenuhi kebutuhan gizi harian. Dengan beragam pilihan menu yang lezat dan bergizi, pelanggan dapat menikmati variasi makanan sehat setiap hari.</p>
           <p>
-            GOHealth menawarkan menu makanan sehat yang dirancang khusus untuk
-            memenuhi kebutuhan gizi harian. Dengan beragam pilihan menu yang
-            lezat dan bergizi, pelanggan dapat menikmati variasi makanan sehat
-            setiap hari.
-          </p>
-          <p>
-            GOHealth memahami bahwa setiap pelanggan memiliki kebutuhan diet
-            yang berbeda. Oleh karena itu, kami menyediakan pilihan menu khusus,
-            seperti vegetarian, vegan, rendah karbohidrat, dan lainnya, sesuai
-            dengan preferensi dan kebutuhan kesehatan individu.
+            GOHealth memahami bahwa setiap pelanggan memiliki kebutuhan diet yang berbeda. Oleh karena itu, kami menyediakan pilihan menu khusus, seperti vegetarian, vegan, rendah karbohidrat, dan lainnya, sesuai dengan preferensi dan
+            kebutuhan kesehatan individu.
           </p>
         </div>
       </div>
@@ -93,47 +74,7 @@
       <h2>Our Special <span>Menu</span></h2>
 
       <!-- card section -->
-      <div class="row">
-        <div class="menu-card">
-          <img src="img/menu1.jpg" alt="menu" />
-          <h3 class="menu-card-title">Spaghetti Aglio Olio</h3>
-          <p class="menu-card-price">IDR 50.000</p>
-          <div class="stars">
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star-half-alt"></i>
-          </div>
-          <a class="btn" id="">471cal</a>
-        </div>
-        <div class="menu-card">
-          <img src="img/menu1.jpg" alt="menu" />
-          <h3 class="menu-card-title">Spaghetti Aglio Olio</h3>
-          <p class="menu-card-price">IDR 50.000</p>
-          <div class="stars">
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star-half-alt"></i>
-          </div>
-          <a class="btn" id="">471cal</a>
-        </div>
-        <div class="menu-card">
-          <img src="img/menu1.jpg" alt="menu" />
-          <h3 class="menu-card-title">Spaghetti Aglio Olio</h3>
-          <p class="menu-card-price">IDR 50.000</p>
-          <div class="stars">
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star-half-alt"></i>
-          </div>
-          <a class="btn" id="">471cal</a>
-        </div>
-      </div>
+      <div id="product-list" class="row"></div>
     </section>
     <!-- Our Special Menu/Recomendation end -->
 
@@ -188,13 +129,44 @@
         <a href="#contact">Contact</a>
       </div>
       <div class="credit">
-        <p>
-          Created by <a href="">Group 17 Section Jakarta</a>. | &copy; 2023.
-        </p>
+        <p>Created by <a href="">Group 17 Section Jakarta</a>. | &copy; 2023.</p>
       </div>
     </footer>
     <!-- footer end -->
 
+    <!-- Konection to API back end -->
+    <script>
+      const baseUrl = "http://localhost:3000";
+      const apiRoutes = {
+        productList: `${baseUrl}/products/list`,
+      };
+      const loadProductList = () => {
+        fetch(apiRoutes.productList)
+          .then((res) => res.json())
+          .then((res) => {
+            res.data.forEach(({ product_image, title, price, AKG }) => {
+              document.getElementById("product-list").innerHTML += `
+            <div id="product-list" class="menu-card">
+              <img src="http://localhost:3000${product_image}" alt="${product_image}" />
+              <h3 class="menu-card-title">${title}</h3>
+              <p class="menu-card-price">IDR${price}</p>
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+              </div>
+              <a class="btn" id="">${AKG}cal</a>
+            </div>
+            `;
+            });
+          });
+      };
+
+      loadProductList();
+    </script>
+    <!-- Konection to API back end -->
     <!-- Feather Icons -->
     <script>
       feather.replace();
