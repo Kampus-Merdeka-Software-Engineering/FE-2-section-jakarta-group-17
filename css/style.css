@@ -23,7 +23,7 @@ body{
     font-family: 'Montserrat', sans-serif;
     background-color: #ffffff;
     color: #1a1919;
-    min-height: 3000px;
+    /* min-height: 3000px; */
 }
 /* Navbar */
 .navbar {
@@ -481,6 +481,7 @@ footer .credit a{
 /* Our team section */
 .our-team{
     padding: 7rem 7% 1.4rem;
+    display: grid;
 }
 .our-team h2{
     color: #191A19;
@@ -492,22 +493,85 @@ footer .credit a{
 .our-team h2 span{
     color: var(--primary);
 }
-.wrapper{
-    background:var(--bg) ;
-    width: 580px;
-    border-radius: 16px;
-    padding: 20px;
-    box-shadow: var(--box-shadow);
+.row-team{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 2rem 1rem;
+    text-align: center;
+    justify-content: center;
+}
+.member{
+    width: 100%;
+    padding: 0.5rem 0;
+}
+.team-member {
+    margin: 8px;
+    box-shadow: 0 0 2.2rem rgba(25, 0, 58, 0.15);
+    padding: 3.5rem 1rem;
+    border-radius: 0.6rem;
+    color: #1f003b;
+    cursor: pointer;
+    transition: 0.3s;
+   
+}
+.team-member .img-container{
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+    background-color: var(--bg);
+    padding: 0.5rem;
+    margin: 0 auto 2rem auto;
+}
+.team-member img{
+    width: 100%;
+    border-radius: 50%;
 
+}
+.team-member h4{
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+.team-member p{
+    font-weight: 300;
+    margin: 0.5rem 0 2rem 0;
+    letter-spacing: 2px;
+}
+.icons {
+    width: 505;
+    min-width: 100px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    
+}
+.team-member a{
+    text-decoration: none;
+    color: inherit;
+    font-size: 1.4rem;
+}
+.team-member:hover{
+    background: linear-gradient(#4E9F3D, #83d673);
+    color: #fff;
+}
+.team-member:hover .img-container{
+    transform: scale(1.15);
 }
 
 
 /* media queries */
 
 /* Laptop */
-@media (max-width: 1366px){
+@media (min-width:992px){
     html{
         font-size: 75%;
+    }
+    .team-member{
+        padding: 5rem 1rem;
+    }
+    .member{
+        flex: 0 0 28%;
+        max-width: 28%;
+        padding: 0 1rem;
     }
 }
 /* tablet */
@@ -578,6 +642,9 @@ footer .credit a{
   }
   .contact .row form{
     padding-top: 0;
+  }
+  .our-team{
+    padding: 1rem 7rem;
   }
   
 }
