@@ -63,48 +63,46 @@
         <h2>Our <span>Menu</span></h2>
   
         <!-- card section -->
-        <div class="row">
-          <div class="menu-card">
-            <img src="img/menu1.jpg" alt="menu" />
-            <h3 class="menu-card-title">Spaghetti Aglio Olio</h3>
-            <p class="menu-card-price">IDR 50.000</p>
-            <div class="stars">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star-half-alt"></i>
-            </div>
-            <a class="btn" id="">471cal</a>
-          </div>
-          <div class="menu-card">
-            <img src="img/menu1.jpg" alt="menu" />
-            <h3 class="menu-card-title">Spaghetti Aglio Olio</h3>
-            <p class="menu-card-price">IDR 50.000</p>
-            <div class="stars">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star-half-alt"></i>
-            </div>
-            <a class="btn" id="">471cal</a>
-          </div>
-          <div class="menu-card">
-            <img src="img/menu1.jpg" alt="menu" />
-            <h3 class="menu-card-title">Spaghetti Aglio Olio</h3>
-            <p class="menu-card-price">IDR 50.000</p>
-            <div class="stars">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star-half-alt"></i>
-            </div>
-            <a class="btn" id="">471cal</a>
-          </div>
+        <div id="product-list" class="row">
+          
         </div>
       </section>
+
+      <!-- contact section start -->
+    <section class="contact" id="contact">
+      <h2><span>Contact</span> Us</h2>
+      <div class="row">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126646.25766546058!2d112.63028099130429!3d-7.275441715926772!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7fbf8381ac47f%3A0x3027a76e352be40!2sSurabaya%2C%20East%20Java!5e0!3m2!1sen!2sid!4v1701577347866!5m2!1sen!2sid"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          class="map"
+        ></iframe>
+        <form action="">
+          <div class="input-group">
+            <div class="icon">
+              <i class="fa-solid fa-user"></i>
+            </div>
+            <input type="text" placeholder="Name" />
+          </div>
+          <div class="input-group">
+            <div class="icon">
+              <i class="fa-solid fa-envelope"></i>
+            </div>
+            <input type="text" placeholder="Email" />
+          </div>
+          <div class="input-group">
+            <div class="icon">
+              <i class="fa-solid fa-message"></i>
+            </div>
+            <input type="text" placeholder="Message" />
+          </div>
+          <button type="submit" class="btn">Send</button>
+        </form>
+      </div>
+    </section>
+    <!-- contact section end -->
 
       <!-- footer start -->
     <footer>
@@ -129,6 +127,40 @@
       <!-- footer end -->
   
       <!-- Feather Icons -->
+
+ <!-- Konection to API back end -->
+    <script>
+      const baseUrl = "http://localhost:3000";
+      const apiRoutes = {
+        productList: `${baseUrl}/products/list`,
+      };
+      const loadProductList = () => {
+        fetch(apiRoutes.productList)
+          .then((res) => res.json())
+          .then((res) => {
+            res.data.forEach(({ product_image, title, price, AKG }) => {
+              document.getElementById("product-list").innerHTML += `
+        <div id="product-list" class="menu-card">
+          <img src="http://localhost:3000${product_image}" alt="${product_image}" />
+          <h3 class="menu-card-title">${title}</h3>
+          <p class="menu-card-price">IDR ${price}</p>
+          <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+          </div>
+          <a class="btn" id="">${AKG}cal</a>
+        </div>
+        `;
+            });
+          });
+      };
+
+      loadProductList();
+    </script>
+      
       <script>
         feather.replace();
       </script>
