@@ -561,7 +561,7 @@ footer .credit a{
 /* media queries */
 
 /* Laptop */
-@media (min-width:992px){
+@media (max-width: 1366px){
     html{
         font-size: 75%;
     }
@@ -655,6 +655,10 @@ footer .credit a{
     html{
         font-size: 55%;
     }
+    #hamburger-menu{
+        display: inline-block;
+    }
+    
     .menu .row .menu-card .stars i{
         font-size: 0.6rem;
     }
