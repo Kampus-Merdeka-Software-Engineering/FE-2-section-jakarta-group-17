@@ -117,8 +117,8 @@
             </div>
             
           </div>
-        </div>
       </section>
+
 
       <!-- footer start -->
     <footer>
@@ -142,6 +142,44 @@
       </footer>
       <!-- footer end -->
   
+      <!-- Feather Icons -->
+
+ <!-- Konection to API back end -->
+    <script>
+      const baseUrl = "http://localhost:3000";
+      const apiRoutes = {
+        productList: `${baseUrl}/products/list`,
+      };
+      const loadProductList = () => {
+        fetch(apiRoutes.productList)
+          .then((res) => res.json())
+          .then((res) => {
+            res.data.forEach(({ product_image, title, price, AKG }) => {
+              document.getElementById("product-list").innerHTML += `
+        <div id="product-list" class="menu-card">
+          <img src="http://localhost:3000${product_image}" alt="${product_image}" />
+          <h3 class="menu-card-title">${title}</h3>
+          <p class="menu-card-price">IDR ${price}</p>
+          <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+          </div>
+          <a class="btn" id="">${AKG}cal</a>
+        </div>
+        `;
+            });
+          });
+      };
+
+      loadProductList();
+    </script>
+      
+      <script>
+        feather.replace();
+      </script>
       <!-- Javascript -->
       <script src="js/script.js"></script>
 </body>
