@@ -29,7 +29,7 @@
           <a href="#contact">Contact</a>
         </div>
         <div class="navbar-extra">
-          <a href="#" id="hamburger-menu"><img src="img/menu.svg" alt="hamburger menu"></a>
+          <a href="#" id="hamburger-menu"><img src="img/menu.svg" alt="hamburger menu" /></a>
         </div>
       </div>
     </nav>
@@ -164,50 +164,15 @@
     <!-- footer end -->
 
     <!-- Feather Icons -->
-    <!-- Conection to API back end -->
-
-    <script>
-      const baseUrl = "http://localhost:3000";
-      const apiRoutes = {
-        productList: `${baseUrl}/products/list`,
-      };
-
-      const loadProductList = () => {
-        fetch(apiRoutes.productList)
-          .then((res) => res.json())
-          .then((res) => {
-            // Display only the first three items
-            const slicedData = res.data.slice(0, 3);
-
-            slicedData.forEach(({ product_image, title, price, AKG }) => {
-              document.getElementById("product-list").innerHTML += `
-                <div class="menu-card">
-                  <img src="${baseUrl}${product_image}" alt="${product_image}" />
-                  <h3 class="menu-card-title">${title}</h3>
-                  <p class="menu-card-price">IDR ${price}</p>
-                  <div class="stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star-half-alt"></i>
-                  </div>
-                  <a class="btn" id="">${AKG}cal</a>
-                </div>
-              `;
-            });
-          });
-      };
-
-      loadProductList();
-    </script>
-
-    <!-- Conection to API back end -->
 
     <script>
       feather.replace();
     </script>
     <!-- Javascript -->
+    <!-- Conection to API back end -->
+    <script src="js/product.js"></script>
+    <!-- Conection to API back end -->
+
     <script src="js/script.js"></script>
   </body>
 </html>
