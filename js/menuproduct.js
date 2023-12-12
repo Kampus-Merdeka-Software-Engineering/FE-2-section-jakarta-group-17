@@ -7,11 +7,12 @@ const loadProductList = () => {
   fetch(apiRoutes.productList)
     .then((res) => res.json())
     .then((res) => {
+      console.log(res);
       const productContainer = document.getElementById("product-list");
 
       res.data.forEach(({ id, product_image, title, price, AKG }) => {
         productContainer.innerHTML += `
-          <div class="product" data-name="p-${id}">
+          <div class="product" data-id="${id}">
             <img src="${baseUrl}/${product_image}" alt="${product_image}">
             <h3>${title}</h3>
             <p class="price">IDR ${price}</p>
@@ -25,6 +26,8 @@ const loadProductList = () => {
           </div>
         `;
       });
+
+      showPopup();
     })
     .catch((error) => {
       console.error("Kesalahan Fetch:", error);
@@ -32,13 +35,3 @@ const loadProductList = () => {
 };
 
 loadProductList();
-
-const openPreview = (productId) => {
-  const previewContainer = document.querySelector(".product-preview");
-  const previewBox = document.getElementById(`preview-${productId}`);
-
-  if (previewBox) {
-    previewContainer.style.display = "flex";
-    previewBox.classList.add("active");
-  }
-};

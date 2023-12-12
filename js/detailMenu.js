@@ -1,5 +1,5 @@
 const apiRoutes = {
-  productsId: (id) => `${baseApiUrl}/products/detail/${id}`,
+  productsId: (id) => `${baseUrl}/products/detail/${id}`,
 };
 
 const setProductDetail = async () => {

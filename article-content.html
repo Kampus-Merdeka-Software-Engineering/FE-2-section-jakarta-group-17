@@ -1,113 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>GoHealth</title>
-    <link rel="Website icon" type="png" href="img/logo Gohealth.png">
+    <link rel="Website icon" type="png" href="img/logo Gohealth.png" />
 
     <!-- Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,600;1,700;1,900&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-    />
-
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,600;1,700;1,900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 
     <!-- CSS -->
     <link rel="stylesheet" href="css/style.css" />
-</head>
-<body>
+  </head>
+  <body>
     <!-- navbar start -->
-   <nav class="navbar">
-    <a href="#" class="navbar-logo">GO<span>HEALTH</span></a>
+    <nav class="navbar">
+      <a href="#" class="navbar-logo">GO<span>HEALTH</span></a>
 
-    <div>
-      <div class="navbar-nav">
+      <div>
+        <div class="navbar-nav">
+          <a href="index.html">Home</a>
+          <a href="menu.html">Menu</a>
+          <a href="#">Article</a>
+          <a href="aboutme.html">About Us</a>
+          <a href="index.html#contact">Contact</a>
+        </div>
+        <div class="navbar-extra">
+          <a href="#" id="hamburger-menu"><img src="img/menu.svg" alt="hamburger menu" /></a>
+        </div>
+      </div>
+    </nav>
+    <!-- navbar end -->
+
+    <!-- content header -->
+    <section class="post-header">
+      <div class="header-content post-container">
+        <!-- post image -->
+        <img src="img/blog1.jpg" alt="blog" class="header-img" />
+      </div>
+    </section>
+    <!-- content header end -->
+    <div class="date-back post-container">
+      <a href="article.html" class="back-article">Back || </a>
+      <span>20 Mei 2022</span>
+    </div>
+
+    <!-- article posts-->
+    <section class="post-content post-container">
+      <!-- tittle -->
+      <h2 class="header-title">Makanan Sehat untuk Gaya Hidup Sehat</h2>
+      <article class="post-text">
+        Gaya hidup sehat tidak hanya mencakup olahraga, tetapi juga memerlukan perhatian khusus pada aspek nutrisi. Makanan yang Anda konsumsi memiliki dampak besar pada kesehatan Anda. Dalam artikel ini, kita akan membahas beberapa makanan
+        sehat yang dapat membantu Anda mencapai dan mempertahankan gaya hidup sehat.
+
+        <p>
+          1. Sayur-sayuran Segar: Penuhi Gizi dengan Warna-warni Hijau Sayur-sayuran adalah sumber serat, vitamin, dan mineral penting. Cobalah untuk memasukkan berbagai warna sayuran dalam setiap hidangan Anda. Brokoli, bayam, wortel, dan
+          paprika adalah pilihan yang kaya akan nutrisi. Serat dalam sayuran juga dapat membantu menjaga pencernaan Anda tetap sehat.
+        </p>
+
+        <p>
+          2. Buah-buahan Beri: Kaya Antioksidan dan Serat Buah-buahan beri seperti blueberry, strawberry, dan raspberry kaya akan antioksidan yang dapat membantu melawan radikal bebas dalam tubuh Anda. Selain itu, buah-buahan ini juga
+          tinggi serat, yang baik untuk pencernaan dan dapat membantu menjaga kadar gula darah stabil.
+        </p>
+
+        <p>
+          3. Protein Sehat: Pilihan Daging Tanpa Lemak dan Sumber Nabati Pilih sumber protein sehat seperti daging tanpa lemak, ikan, telur, dan kacang-kacangan. Protein adalah bahan bangunan utama untuk sel-sel tubuh, dan konsumsi yang
+          cukup dapat membantu memperbaiki dan memelihara otot Anda.
+        </p>
+
+        <p>
+          4. Karbohidrat Kompleks: Pilihlah dengan Bijak Hindari karbohidrat sederhana dan rafinasi, dan pilihlah karbohidrat kompleks seperti oatmeal, quinoa, dan ubi jalar. Karbohidrat kompleks memberikan energi yang stabil dan bertahan
+          lebih lama, sehingga membantu mengurangi keinginan untuk ngemil.
+        </p>
+
+        <p>
+          5. Lemak Sehat: Omega-3 dari Ikan dan Alpukat Asam lemak omega-3 sangat baik untuk kesehatan jantung dan otak. Sumber-sumber lemak sehat meliputi ikan berlemak seperti salmon, sarden, dan alpukat. Hindari lemak jenuh dan trans,
+          dan pilih lemak sehat untuk mendukung fungsi tubuh yang optimal.
+        </p>
+
+        <p>
+          6. Air Putih: Pentingnya Hidrasi untuk Kesehatan Jangan lupakan pentingnya air dalam gaya hidup sehat. Minum cukup air setiap hari dapat membantu menjaga kelembapan kulit, menjaga fungsi organ, dan membantu proses pencernaan.
+          Hindari minuman berkalori tinggi dan gula tambahan.
+        </p>
+      </article>
+    </section>
+    <!-- article posts end-->
+
+    <!-- footer start -->
+    <footer>
+      <div class="social">
+        <a href="#"><i data-feather="instagram"></i></a>
+        <a href="#"><i data-feather="facebook"></i></a>
+        <a href="#"><i data-feather="twitter"></i></a>
+      </div>
+      <div class="links">
         <a href="index.html">Home</a>
         <a href="menu.html">Menu</a>
-        <a href="#">Article</a>
+        <a href="article.html">Article</a>
         <a href="aboutme.html">About Us</a>
-        <a href="index.html#contact">Contact</a>
+        <a href="#contact">Contact</a>
       </div>
-      <div class="navbar-extra">
-        <a href="#" id="hamburger-menu"><img src="img/menu.svg" alt="hamburger menu"></a>
+      <div class="credit">
+        <p>Created by <a href="">Group 17 Section Jakarta</a>. | &copy; 2023.</p>
       </div>
+    </footer>
+    <!-- footer end -->
+    <div id="detail-article">
+      <!-- Konten artikel akan ditampilkan di sini -->
     </div>
-  </nav>
-  <!-- navbar end -->
-
-  <!-- content header -->
-  <section class="post-header">
-    <div class="header-content post-container">
-        <!-- post image -->
-        <img src="img/blog1.jpg" alt="blog" class="header-img">
-    </div>
-  </section>
-  <!-- content header end -->
-  <div class="date-back post-container">
-    <a href="article.html" class="back-article">Back || </a>
-    <span>20 Mei 2022</span>
-  </div>
-  
-  <!-- article posts-->
-  <section class="post-content post-container">
-     <!-- tittle -->
-     <h2 class="header-title">Makanan Sehat untuk Gaya Hidup Sehat</h2>
-    <article class="post-text">
-        Gaya hidup sehat tidak hanya mencakup olahraga, tetapi juga memerlukan perhatian khusus pada aspek nutrisi. Makanan yang Anda konsumsi memiliki dampak besar pada kesehatan Anda. Dalam artikel ini, kita akan membahas beberapa makanan sehat yang dapat membantu Anda mencapai dan mempertahankan gaya hidup sehat.
-
-        <p>1. Sayur-sayuran Segar: Penuhi Gizi dengan Warna-warni Hijau
-            Sayur-sayuran adalah sumber serat, vitamin, dan mineral penting. Cobalah untuk memasukkan berbagai warna sayuran dalam setiap hidangan Anda. Brokoli, bayam, wortel, dan paprika adalah pilihan yang kaya akan nutrisi. Serat dalam sayuran juga dapat membantu menjaga pencernaan Anda tetap sehat.</p>
-
-        <p>2. Buah-buahan Beri: Kaya Antioksidan dan Serat
-            Buah-buahan beri seperti blueberry, strawberry, dan raspberry kaya akan antioksidan yang dapat membantu melawan radikal bebas dalam tubuh Anda. Selain itu, buah-buahan ini juga tinggi serat, yang baik untuk pencernaan dan dapat membantu menjaga kadar gula darah stabil.</p>
-
-        <p>3. Protein Sehat: Pilihan Daging Tanpa Lemak dan Sumber Nabati
-            Pilih sumber protein sehat seperti daging tanpa lemak, ikan, telur, dan kacang-kacangan. Protein adalah bahan bangunan utama untuk sel-sel tubuh, dan konsumsi yang cukup dapat membantu memperbaiki dan memelihara otot Anda.</p>
-
-        <p>4. Karbohidrat Kompleks: Pilihlah dengan Bijak
-            Hindari karbohidrat sederhana dan rafinasi, dan pilihlah karbohidrat kompleks seperti oatmeal, quinoa, dan ubi jalar. Karbohidrat kompleks memberikan energi yang stabil dan bertahan lebih lama, sehingga membantu mengurangi keinginan untuk ngemil.</p>
-
-       <p> 5. Lemak Sehat: Omega-3 dari Ikan dan Alpukat
-        Asam lemak omega-3 sangat baik untuk kesehatan jantung dan otak. Sumber-sumber lemak sehat meliputi ikan berlemak seperti salmon, sarden, dan alpukat. Hindari lemak jenuh dan trans, dan pilih lemak sehat untuk mendukung fungsi tubuh yang optimal.</p>
-
-        <p>6. Air Putih: Pentingnya Hidrasi untuk Kesehatan
-            Jangan lupakan pentingnya air dalam gaya hidup sehat. Minum cukup air setiap hari dapat membantu menjaga kelembapan kulit, menjaga fungsi organ, dan membantu proses pencernaan. Hindari minuman berkalori tinggi dan gula tambahan.</p>
-
-    </article>
-
-  </section>
-  <!-- article posts end-->
-
-   <!-- footer start -->
-   <footer>
-    <div class="social">
-      <a href="#"><i data-feather="instagram"></i></a>
-      <a href="#"><i data-feather="facebook"></i></a>
-      <a href="#"><i data-feather="twitter"></i></a>
-    </div>
-    <div class="links">
-      <a href="index.html">Home</a>
-      <a href="menu.html">Menu</a>
-      <a href="article.html">Article</a>
-      <a href="aboutme.html">About Us</a>
-      <a href="#contact">Contact</a>
-    </div>
-    <div class="credit">
-      <p>
-        Created by <a href="">Group 17 Section Jakarta</a>. | &copy; 2023.
-      </p>
-    </div>
-  </footer>
-  <!-- footer end -->
-    
-  <!-- Javascript -->
-  <script src="js/script.js"></script>
-</body>
+    <!-- Javascript -->
+    <script src="js/artikel.js"></script>
+    <script src="js/script.js"></script>
+  </body>
 </html>
