@@ -12,20 +12,19 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,600;1,700;1,900&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 
-    <!-- Link Swiper's CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <!-- mystyle -->
+    <!-- CSS -->
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
     <!-- navbar start -->
     <nav class="navbar">
       <a href="#" class="navbar-logo">GO<span>HEALTH</span></a>
+
       <div>
         <div class="navbar-nav">
           <a href="index.html">Home</a>
-          <a href="#">Menu</a>
-          <a href="article.html">Article</a>
+          <a href="menu.html">Menu</a>
+          <a href="#">Article</a>
           <a href="aboutme.html">About Us</a>
           <a href="index.html#contact">Contact</a>
         </div>
@@ -36,42 +35,22 @@
     </nav>
     <!-- navbar end -->
 
-    <!-- hero section -->
-    <section class="page-menu" id="page-menu">
-      <div class="header-menu">
-        <main class="content">
-          <h1>Get <span>a healthy and nutritious food </span>menu starting now here</h1>
-        </main>
-      </div>
+    <!-- Hero section start -->
+    <section class="article" id="article">
+      <main class="content">
+        <h1>Get <span>healthy food tips</span> to support your healthy life from here</h1>
+      </main>
     </section>
-    <!-- hero section end -->
+    <!-- Hero section end -->
 
-    <!-- our menu -->
-    <!-- our menu -->
-    <section class="menu" id="menu">
-      <h2>Our <span>Menu</span></h2>
-
-      <!-- card section -->
-      <div class="container">
-        <div id="product-list" class="product-container"></div>
+    <!-- content section -->
+    <div class="blog">
+      <div class="header-blog">
+        <h2>Our <span>Article</span></h2>
       </div>
-
-      <!-- product preview -->
-      <div class="product-preview">
-        <div class="preview" id="preview-1" data-target="p-1">
-          <img id="product-image" src="img/oglio.jpg" alt="" />
-          <h3 id="product-title">Spaghetti Aglio Olio</h3>
-          <span>471 Calories</span>
-          <h4>Menu Ingredients</h4>
-          <p>Spaghetti • Onion • Green chilli • Olive oil • Parmesan cheese • Smoked beef • Salt • Flour • Oregano • Fresh basil • Garlic • Olive Oil</p>
-          <div class="price">IDR 50,000</div>
-          <div class="buttons">
-            <a href="#" class="back">Back</a>
-            <a href="#" class="cart">Add to Cart</a>
-          </div>
-        </div>
-      </div>
-    </section>
+      <div id="article-list" class="blog-container"></div>
+    </div>
+    <!-- content section end-->
 
     <!-- footer start -->
     <footer>
@@ -82,21 +61,24 @@
       </div>
       <div class="links">
         <a href="index.html">Home</a>
-        <a href="#">Menu</a>
+        <a href="menu.html">Menu</a>
         <a href="article.html">Article</a>
-        <a href="aboutme.html">About Me</a>
-        <a href="index.html#contact">Contact</a>
+        <a href="aboutme.html">About Us</a>
+        <a href="#contact">Contact</a>
       </div>
       <div class="credit">
         <p>Created by <a href="">Group 17 Section Jakarta</a>. | &copy; 2023.</p>
       </div>
     </footer>
-    <!-- footer end -->
 
-    <!-- Feather Icons -->
-    <script src="js/script.js"></script>
-    <script src="js/menuproduct.js"></script>
-    <script src="js/detailMenu.js"></script>
+    <!-- footer end -->
+    <script>
+      function redirectToDetail(id) {
+        window.location.href = `/article?id=${id}`;
+      }
+    </script>
     <!-- Javascript -->
+    <script src="js/artikel.js"></script>
+    <script src="js/script.js"></script>
   </body>
 </html>
