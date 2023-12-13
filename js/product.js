@@ -1,4 +1,4 @@
-const baseApiUrl = window.location.hostname === "localhost" ? "http://localhost:3000" : "PATH_URL_API_RAILWAY";
+const baseApiUrl = window.location.hostname === "localhost" ? "http://localhost:3000" : "mysql://root:Ddedg-BH3Gb4AcbHC3CE5c6DG65fFgGh@monorail.proxy.rlwy.net:41345/railway";
 const apiRoutes = {
   productList: `${baseApiUrl}/products/list`,
 };
@@ -13,7 +13,7 @@ const loadProductList = () => {
       slicedData.forEach(({ product_image, title, price, AKG }) => {
         document.getElementById("product-list").innerHTML += `
                 <div class="menu-card">
-                <img src="${baseUrl}/${product_image}" alt="${product_image}" />
+                <img src="${baseApiUrl}/${product_image}" alt="${product_image}" />
                 <h3 class="menu-card-title">${title}</h3>
                   <p class="menu-card-price">IDR ${price}</p>
                   <div class="stars">
