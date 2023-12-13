@@ -1,6 +1,6 @@
-const baseUrl = "http://localhost:3000";
+const baseApiUrl = window.location.hostname === "localhost" ? "http://localhost:3000" : "PATH_URL_API_RAILWAY";
 const apiRoutes = {
-  productList: `${baseUrl}/products/list`,
+  productList: `${baseApiUrl}/products/list`,
 };
 
 const loadProductList = () => {
