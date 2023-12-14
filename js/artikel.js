@@ -1,4 +1,4 @@
-const baseApiUrl = window.location.hostname === "localhost" ? "http://localhost:3000" : "PATH_URL_API_RAILWAY";
+const baseApiUrl = window.location.hostname === "localhost" ? "http://localhost:3000" : "https://erin-awful-snail.cyclic.app";
 const apiRoutes = {
   artikelList: `${baseApiUrl}/products/artikellist`,
 };
@@ -9,11 +9,11 @@ const loadArtikelList = () => {
     .then((res) => {
       const artikelContainer = document.getElementById("article-list");
 
-      res.data.forEach(({ Judul, Deskripsi, Gambar, TglTerbit, Isi }) => {
+      res.data.forEach(({ id, Judul, Deskripsi, Gambar, TglTerbit, Isi }) => {
         artikelContainer.innerHTML += `
-        <div class="blog-box">
+        <div class="blog-box" onclick={redirectToDetail(${id})} >
         <div class="blog-img">
-          <img src="${baseUrl}/${Gambar}" alt="${Gambar}">
+          <img src="${baseApiUrl}/${Gambar}" alt="${Gambar}">
         </div>
         <!-- text -->
         <div class="blog-text">

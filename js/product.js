@@ -1,4 +1,4 @@
-const baseApiUrl = window.location.hostname === "localhost" ? "http://localhost:3000" : "mysql://root:Ddedg-BH3Gb4AcbHC3CE5c6DG65fFgGh@monorail.proxy.rlwy.net:41345/railway";
+const baseApiUrl = window.location.hostname === "localhost" ? "http://localhost:3000" : "https://erin-awful-snail.cyclic.app";
 const apiRoutes = {
   productList: `${baseApiUrl}/products/list`,
 };
