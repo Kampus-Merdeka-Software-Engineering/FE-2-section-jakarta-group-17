@@ -38,12 +38,10 @@ const showPopup = () => {
         .then((res) => {
           let detail = res.data;
 
-          productimage.setAttribute("src", detail.product_image);
+          // productimage.setAttribute("src", detail.product_image);
           productTitle.innerHTML = detail.title;
           productprice.innerHTML = detail.price;
           productAKG.innerHTML = detail.AKG;
-
-          console.log(detail.product_image);
 
           previewContainer.style.display = "flex";
           let name = product.getAttribute("data-name");
