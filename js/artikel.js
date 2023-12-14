@@ -1,4 +1,4 @@
-const baseApiUrl = window.location.hostname === "localhost" ? "http://localhost:3000" : "https://erin-awful-snail.cyclic.app";
+const baseApiUrl = window.location.hostname === "localhost" ? "http://localhost:3000" : "https://kind-cyan-hen-cuff.cyclic.app";
 const apiRoutes = {
   artikelList: `${baseApiUrl}/products/artikellist`,
 };

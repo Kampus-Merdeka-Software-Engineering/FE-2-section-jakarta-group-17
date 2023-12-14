@@ -33,7 +33,7 @@ const showPopup = () => {
       let productId = this.getAttribute("data-id");
 
       // fetch detail from product
-      fetch(`https://erin-awful-snail.cyclic.app/products/detail/${productId}`)
+      fetch(`https://kind-cyan-hen-cuff.cyclic.app/products/detail/${productId}`)
         .then((res) => res.json())
         .then((res) => {
           let detail = res.data;
